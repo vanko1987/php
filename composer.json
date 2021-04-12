@@ -19,5 +19,8 @@
     "psr-4": {
       "Foo\\": "src"
     }
+  },
+  "config":{
+    "disable-tls": true
   }
 }
