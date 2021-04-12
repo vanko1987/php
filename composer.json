@@ -21,6 +21,7 @@
     }
   },
   "config":{
-    "disable-tls": true
+    "disable-tls": true,
+	"secure-http": false
   }
 }
