@@ -15,8 +15,8 @@
     <property name="sonar.projectVersion" value="1.0"/>
     <property name="sonar.sources" value="src"/>
 	<property name="sonar.binaries" value="build"/>
-	<property name="sonar.php.coverage.reportPaths" value="build/coverage"></property>
-    <property name="sonar.php.tests.reportPath" value="build/logs"></property>
+	<property name="sonar.php.coverage.reportPaths" value="${basedir}/build/logs/clover.xml"></property>
+    <property name="sonar.php.tests.reportPath" value="${basedir}/build/logs/junit.xml"></property>
 
 
     <!-- Use this when all tools are on the $PATH -->
