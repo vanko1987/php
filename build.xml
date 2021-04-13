@@ -234,14 +234,14 @@
         </fail>
         <echo message="Checked failure"/>
     </target>
-    <target name="sonar" xmlns:sonar="antlib:org.sonar.ant">
+    <target name="sonar">
 	
     <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
         <!-- Update the following line, or put the "sonarqube-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
-        <classpath path="/ant/sonarqube-ant-task--2.7.0.1612.jar" />
+        <classpath path="/ant/sonarqube-ant-task-2.7.0.1612.jar" />
     </taskdef>
  
     <!-- Execute SonarScanner for Ant Analysis -->
-     <sonar:sonar xmlns:sonar="antlib:org.sonar.ant"></sonar:sonar>
+     <sonar:sonar />
     </target>
 </project>
