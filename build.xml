@@ -9,7 +9,7 @@
     <property name="phploc" value="${basedir}/vendor/bin/phploc"/>
     <property name="phpmd" value="${basedir}/vendor/bin/phpmd"/>
     <property name="phpunit" value="${basedir}/vendor/bin/phpunit"/>
-	<!--<property name="sonar.host.url" value="http://sonarqube:9000/sonarqube"/>-->
+	<property name="sonar.host.url" value="http://10.11.32.22/sonarqube"/>
 	<property name="sonar.projectKey" value="php"/>
     <property name="sonar.projectName" value="php"/>
     <property name="sonar.projectVersion" value="1.0"/>
