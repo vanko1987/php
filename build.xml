@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="php-automate-build-ant" default="full-build">
+<project name="php-automate-build-ant" default="full-build" xmlns:sonar="antlib:org.sonar.ant">
 
     <!-- By default the tools are managed by Composer in ${basedir}/vendor/bin -->
     <property name="pdepend" value="${basedir}/vendor/bin/pdepend"/>
@@ -9,6 +9,12 @@
     <property name="phploc" value="${basedir}/vendor/bin/phploc"/>
     <property name="phpmd" value="${basedir}/vendor/bin/phpmd"/>
     <property name="phpunit" value="${basedir}/vendor/bin/phpunit"/>
+	<property name="sonar.host.url" value="http://sonarqube:9000"/>
+	<property name="sonar.projectKey" value="org.sonarqube:sonarqube-scanner-ant" />
+    <property name="sonar.projectName" value="php-automate-build-ant" />
+    <property name="sonar.projectVersion" value="1.0" />
+    <property name="sonar.sources" value="src" />
+
 
     <!-- Use this when all tools are on the $PATH -->
     <!--
@@ -227,5 +233,13 @@
         </fail>
         <echo message="Checked failure"/>
     </target>
-
+    <target name="sonar">
+    <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
+        <!-- Update the following line, or put the "sonarqube-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
+        <classpath path="/ant/sonarqube-ant-task--2.7.0.1612.jar" />
+    </taskdef>
+ 
+    <!-- Execute SonarScanner for Ant Analysis -->
+    <sonar:sonar />
+    </target>
 </project>
