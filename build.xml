@@ -13,8 +13,6 @@
 	<property name="sonar.projectKey" value="php"/>
     <property name="sonar.projectName" value="php"/>
     <property name="sonar.projectVersion" value="1.0"/>
-	<property name="sonar.login" value="admin"/>
-	<property name="sonar.password" value="admin"/>
     <property name="sonar.sources" value="src"/>
 	<property name="sonar.binaries" value="build"/>
 
